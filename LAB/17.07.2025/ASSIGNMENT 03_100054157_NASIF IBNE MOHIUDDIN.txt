@@ -1,0 +1,204 @@
+// ans to the ques no 1 
+import java.util.Scanner ;
+public class task1 {
+  public static void main (String  [] args){
+
+    Scanner sc= new Scanner (System.in);
+    int num= sc.nextInt();
+    for (int i =0 ; i<=num ; i++){
+      if (i %5==0 &&  i %3!=0){
+      System.out.println(i);
+      }
+    }
+    sc.close();
+  }
+}
+
+// ans to the ques no 2
+public class task2{
+  public static void main (String [] args){
+
+    int sum=0;
+    for (int i =1 ; i<=600 ; i++){
+      if (i %7==0 && i %9!=0 || i%9==0 && i %7!=0){
+      sum +=i;
+      }
+    }
+  System.out.println(sum);
+  
+  }
+}
+
+//ans to the ques no 3
+import java.util.Scanner;
+public class task3{
+  public static void main (String [] args){
+
+    Scanner sc= new Scanner (System.in);
+    System.out.print("Enter an Integer");
+    int x= sc.nextInt();
+    int positive =0;
+    int negative =0;
+    for (int i =1 ; i<=x ; i++){
+      System.out.printf ("Enter number %d", i);
+      int num = sc.nextInt();
+      if (num>=0){
+      positive ++;
+      }
+      else {
+      negative ++;
+      }
+    }
+    System.out.printf("%d Non-negative Numbers\n", positive);
+    System.out.printf("%d Negative Numbers\n", negative);
+    sc.close();
+  }
+}
+
+//ans to the ques no 4
+import java.util.Scanner;
+public class task4{
+  public static void main (String [] args){
+
+    Scanner sc= new Scanner (System.in);
+    System.out.print("Enter the number of terms");
+    int x = sc.nextInt();
+    int sum=0;
+    int odd =1;
+    System.out.println("The odd numbers are : ");
+    for (int i=1 ; i<=x ; i++){
+    System.out.println(odd);
+    sum +=odd;
+    odd +=2;
+    }
+    System.out.printf("The Sum of odd Natural Numbers up to %d terms is: %d\n", x, sum);
+  sc.close();
+  }
+}
+
+//ans to the ques no 5
+import java.util.Scanner;
+public class task5{
+  public static void main (String [] args){
+
+    Scanner sc=new Scanner (System.in);
+    int sum =0;
+    for (int i =1; i<=10 ; i++){
+    System.out.printf("Enter Number: ");
+    int num = sc.nextInt();
+    sum +=num;
+    System.out.printf("Sum= %d\n", sum);
+    }
+    sc.close();
+  }
+}
+
+// ans to the ques no 6
+import java.util.Scanner;
+public class task6{
+  public static void main (String [] args){
+  
+    Scanner sc=new Scanner (System.in);
+    int num = sc.nextInt();
+    System.out.printf("Divisors of %d:\n",num);
+    for (int i =1 ; i<=num ; i++){
+      if (num % i ==0){
+      System.out.printf("%d\n",i);
+      }
+    }
+  sc.close();
+  }
+}
+
+// ans to the ques no 7
+import java.util.Scanner ;
+public class task7{
+  public static void main (String [] args){
+
+    Scanner sc= new Scanner (System.in);
+    int num = sc.nextInt();
+    int digit=0;
+    while (num>0){
+    digit = num%10;
+    if (num<10){
+    System.out.printf("%d ",digit);
+    }
+    else {
+    System.out.printf("%d, ",digit);
+     }
+    num = num/10;
+    }
+    sc.close();
+  }
+}
+
+//ans to the ques no 8
+import java.util.Scanner;
+public class task8{
+  
+  public static void main (String [] args){
+
+    Scanner sc=new Scanner (System.in);
+    int num =sc.nextInt();
+    int initial= num;
+    int digitCount=0;
+    int div=10;
+    int digit=0;
+    while (num!=0){
+      digitCount++;
+      num = num/10;
+    }
+    for (int i=1; i<digitCount-1 ; i++){
+      div *=10;    
+    }
+    while (initial!=0){
+      digit = initial/div;
+      if (initial<10){
+        System.out.printf ("%d ",digit);
+      }
+      else {
+        System.out.printf ("%d , ",digit);
+      }
+      initial = initial%div;
+      div /= 10;
+    }
+    sc.close();
+  }
+}
+
+// ans to the ques no 9
+import java.util.Scanner;
+public class task9{
+  public static void main (String [] args){
+
+    Scanner sc= new Scanner (System.in);
+    int num = sc.nextInt();
+    int divCount=0;
+    int sum=0;
+    for (int i=1 ; i<= num ; i++){
+      if (num % i==0){
+      divCount ++;
+      }
+     }
+    for (int j=1 ; j<num ; j++){
+      if (num % j ==0){
+      sum += j;
+      }
+    }
+    if (divCount ==2 ){
+      System.out.println(num + " is a Prime number.");
+    }
+    else {
+      System.out.println(num + " is not a Prime number.");
+    }
+    if (sum == num){
+    System.out.println(num + " is a perfect number.");
+    }
+    else {
+    System.out.println(num + " is not a perfect number.");
+    }
+    sc.close();
+  }
+}
+
+

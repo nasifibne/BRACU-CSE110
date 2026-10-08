@@ -1,0 +1,28 @@
+import java.util.Scanner;
+public class hometask1{
+  public static void main (String [] args){
+
+    Scanner sc = new Scanner (System.in);
+   
+    int x =sc.nextInt();
+    int y= sc.nextInt();
+    int count=0;
+    int sum=0;
+    int test=0;
+    int j=0;
+    while (j<=test){
+      while (count<y){
+        if (x%2==1){
+        sum +=x;
+        }
+        else {
+        sum = x+1;
+        }
+      x +=2;
+      count++;
+    }
+  System.out.println(sum);
+  j++;
+    }  
+  }
+}

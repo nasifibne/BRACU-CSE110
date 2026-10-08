@@ -1,0 +1,27 @@
+import java.util.Scanner;
+public class Task4{
+    public static void main(String[]args){
+        Scanner sc1= new Scanner(System.in);
+        System.out.println("Please enter the number of terms: ");
+        int in=sc1.nextInt();
+        int sum=0;
+        System.out.println("the odd numbers are:");
+
+            for(int num1=1;num1<=in;num1++){
+                
+               if(in==0){
+            
+            System.out.println("None");
+            System.out.println("The Sum of odd Natural Numbers up to 0 terms is: 0");
+               }
+               else if(num1%2!=0){
+            System.out.println(num1);
+            sum=sum+num1;
+            }
+                
+           
+            
+    }
+         System.out.println("The Sum of odd Natural Numbers up to "+in+ " terms is: "+sum);
+    }
+}

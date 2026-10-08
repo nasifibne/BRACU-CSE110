@@ -1,0 +1,44 @@
+import java.util.Scanner;
+public class q1118{
+  public static void main(String [] args){
+  
+    Scanner sc = new Scanner (System.in);
+    int x=0;
+    double sum=0;
+    for (int i=1; i>0; i++){
+      double a = sc.nextDouble();
+      if (a>=0 && a<=10){
+      
+        if (a==2){
+        break;
+            }
+        else if (a==1){
+        sum =0;
+        }
+        else {
+        sum += a;
+        x++;
+          if (x==2){        
+          double avg= sum/2;
+          System.out.printf("media = %.2f\n",avg);
+          System.out.println("novo calculo (1-sim 2-nao)");
+          }
+          else if (x==3){
+          System.out.println("novo calculo (1-sim 2-nao)");
+          }
+      }       
+      }
+      else {
+      System.out.println("nota invalida");
+      }
+    }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  }}

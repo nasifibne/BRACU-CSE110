@@ -1,0 +1,18 @@
+public class design3{
+  public static void main(String [] args){
+  
+  int n=9;
+  for (int i =1; i<=n ; i++){
+  
+    for (int j=n/2; j>0; j--){
+     System.out.print(" o");
+    }
+    for (int k= )
+  
+  
+  }
+
+    
+    
+  }
+}

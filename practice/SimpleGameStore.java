@@ -1,0 +1,59 @@
+import java.util.Scanner; 
+public class SimpleGameStore { 
+public static void main(String[] args) { 
+  Scanner scanner = new Scanner(System.in); 
+  System.out.print("\nEnter your initial wallet balance: "); 
+  int balance = scanner.nextInt(); 
+  System.out.print("Enter the number of the game you want to purchase(1-4): "); 
+  int choice = scanner.nextInt(); 
+  int price = 0; 
+  if (choice == 1) { 
+    price = 70; 
+  } else if (choice == 2) { 
+    price = 90; 
+  } else if (choice == 3) { 
+    price = 110; 
+  } else if (choice == 4) { 
+    price = 130; 
+  } else { 
+    System.out.println("Invalid game selection."); 
+  } 
+if (choice >= 1 && choice <= 4) { 
+if (balance >= price) { 
+balance = balance - price; 
+System.out.println("Game purchased successfully!"); 
+if (balance % 3 == 0) { 
+System.out.println("Success! Your remaining balance is 
+divisible by 3."); 
+} else { 
+System.out.print("Your remaining balance is not divisible by 3.\nChoose another game to purchase (1-4): "); 
+int secondChoice = scanner.nextInt(); 
+int secondPrice = 0; 
+if (secondChoice == 1) { 
+secondPrice = 70; 
+} else if (secondChoice == 2) { 
+secondPrice = 90; 
+} else if (secondChoice == 3) { 
+secondPrice = 110; 
+} else if (secondChoice == 4) { 
+secondPrice = 130; 
+} else { 
+System.out.println("Invalid game selection."); 
+} 
+if (secondChoice >= 1 && secondChoice <= 4) { 
+if (balance >= secondPrice) { 
+balance = balance - secondPrice; 
+System.out.println("Second game purchased successfully!"); 
+} 
+else { 
+System.out.println("Insufficient balance for selected game."); 
+} 
+} 
+} 
+
+else { 
+System.out.println("Insufficient balance for selected game."); 
+}  
+System.out.println("Final balance: " + balance + " Taka"); 
+scanner.close();
+}}

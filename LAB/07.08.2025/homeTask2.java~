@@ -1,0 +1,28 @@
+//ans to the ques no 2
+import java.util.Scanner;
+public class homeTask2{
+  public static void main (String [] args){
+
+    Scanner scaner = new Scanner (System.in);
+    int n =scaner.nextInt();
+    for (int r =1 ; r<n ; r++){
+      for (int j =1; j<=n ; j++){
+        if (j<=n-r){
+          System.out.print(" ");
+        }
+        else {
+          if (j==(n-r)+1 || j==n){
+          System.out.print(j);
+          }
+          else {
+            System.out.print(" ");
+          }
+        }
+      }
+      System.out.println();
+    }
+    for (int r=1 ; r<=n; r++){
+      System.out.print(r);
+    }
+  }  
+ }

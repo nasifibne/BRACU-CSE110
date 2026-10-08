@@ -1,0 +1,50 @@
+import java.util.Scanner;
+
+public class Hourglass {
+
+    public static void main(String[] args) {
+        // Create a Scanner object to read user input
+        Scanner scanner = new Scanner(System.in);
+        
+        // Prompt the user to enter a number
+        System.out.print("Enter a number to generate the hourglass pattern: ");
+        int n = scanner.nextInt();
+        
+        // --- Code for the top half of the hourglass (including the middle row of 1) ---
+        // The outer loop iterates from n down to 1
+        for (int i = n; i >= 1; i--) {
+            // Inner loop to print leading spaces. The number of spaces increases as the rows get shorter
+            for (int j = 1; j <= n - i; j++) {
+                System.out.print(" ");
+            }
+            
+            // Inner loop to print the numbers. It prints numbers from 1 to i
+            for (int k = 1; k <= i; k++) {
+                System.out.print(k);
+            }
+            
+            // Move to the next line after each row is printed
+            System.out.println();
+        }
+        
+        // --- Code for the bottom half of the hourglass (excluding the middle row) ---
+        // The outer loop iterates from 2 up to n
+        for (int i = 2; i <= n; i++) {
+            // Inner loop to print leading spaces. The number of spaces decreases as the rows get longer
+            for (int j = 1; j <= n - i; j++) {
+                System.out.print(" ");
+            }
+            
+            // Inner loop to print the numbers. It prints numbers from 1 to i
+            for (int k = 1; k <= i; k++) {
+                System.out.print(k);
+            }
+            
+            // Move to the next line
+            System.out.println();
+        }
+        
+        // Close the scanner object
+        scanner.close();
+    }
+}

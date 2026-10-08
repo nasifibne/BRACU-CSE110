@@ -1,0 +1,34 @@
+// ans to the ques no 9
+import java.util.Scanner;
+public class task9{
+  public static void main (String [] args){
+
+    Scanner sc= new Scanner (System.in);
+    int num = sc.nextInt();
+    int divCount=0;
+    int sum=0;
+    for (int i=1 ; i<= num ; i++){
+      if (num % i==0){
+      divCount ++;
+      }
+     }
+    for (int j=1 ; j<num ; j++){
+      if (num % j ==0){
+      sum += j;
+      }
+    }
+    if (divCount ==2 ){
+      System.out.println(num + " is a Prime number.");
+    }
+    else {
+      System.out.println(num + " is not a Prime number.");
+    }
+    if (sum == num){
+    System.out.println(num + " is a perfect number.");
+    }
+    else {
+    System.out.println(num + " is not a perfect number.");
+    }
+    sc.close();
+  }
+}

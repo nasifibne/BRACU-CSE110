@@ -1,0 +1,15 @@
+import java.util.Scanner;
+
+public class lastask2 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner( System .in);
+        String in= sc.nextLine();
+         int ca = in.length();
+         String fin ="";
+         for (int i = ca-1 ; i>=0 ; i--){
+             char d = in.charAt(i);
+             fin += d;
+         }
+        System.out.println(fin);
+    }
+}

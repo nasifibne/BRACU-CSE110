@@ -1,0 +1,176 @@
+//ans to the ques no 1
+import java.util.Scanner;
+public class home101{
+
+  public static void main (String [] args){
+    Scanner sc = new Scanner(System.in);
+    //A
+    System.out.println("give a number to check prime");
+    boolean checkPrime = isPrime(sc.nextInt());
+    System.out.println(checkPrime);
+    //B
+    System.out.println("give a number to check perfect");
+    boolean checkPrefect = isPerfect(sc.nextInt());
+    System.out.println(checkPrefect);
+    //C
+    System.out.println("give a number");
+    int result = special_sum(sc.nextInt());
+    System.out.println(result);
+
+  }
+//A
+  public static boolean isPrime(int a ){
+  boolean flag = true;
+  for(int i=2 ; i<a ; i++){
+    if( a%i==0){
+      flag = false;
+    }
+  }
+  return flag;
+  }
+  //B
+  public static boolean isPerfect(int a ){
+    boolean flag = false;
+    int sum=0;
+    for(int i=1; i<a ;i++){
+      if(a%i==0){
+        sum +=i;
+      }
+    }
+    if(sum== a ){
+      flag = true;
+    }
+    return flag;
+  }
+//C
+  public static int special_sum (int a ){
+    int sum =0;
+    for (int i =2 ; i<= a ; i++){
+      if( isPrime(i) || isPerfect(i)){
+         sum +=i;
+      }
+   }
+    return sum;
+  }
+}
+
+//ans to the ques no 2
+
+import java.util.Scanner;
+
+public class home102{
+
+  public static void main (String [] args){
+      Scanner sc = new Scanner(System.in);
+    //A
+      System.out.println("give number to print dots");
+    showDot(sc.nextInt());
+    System.out.println();
+    //B
+      System.out.println("give number to print palindrome");
+    showPalin(sc.nextInt());
+    System.out.println();
+    //C
+      System.out.println("give number to print diamond");
+    showDiamond(sc.nextInt());
+  }
+  //A
+  public static void showDot(int a){
+    for (int i =1 ; i<=a ;i++){
+      System.out.print(".");
+    }
+
+  }
+  //B
+  public static void showPalin(int a ){
+    for (int i =1 ; i<=a ; i++){
+      System.out.print(i);
+    }
+    for (int i = a-1 ; i>0 ; i--){
+      System.out.print(i);
+    }
+  }
+//C
+  public static void showDiamond (int a ){
+      for(int i =1 ; i<=a ; i++){
+        showDot(a-i);
+        showPalin(i);
+        showDot(a-i);
+        System.out.println();
+      }
+      for(int i =a-1 ; i>0 ; i--){
+      showDot(a-i);
+      showPalin(i);
+      showDot(a-i);
+      System.out.println();
+      }
+  }
+}
+
+//ans to the ques no 3
+
+import java.util.Scanner;
+    public class home103{
+
+        public static void main (String [] args){
+            Scanner sc = new Scanner (System.in);
+            System.out.println("give age");
+            int age = sc.nextInt();
+            System.out.println("give the amount of salary");
+            int salary = sc.nextInt();
+            //A
+            double tax = calcTax(age,salary);
+            System.out.printf("the amount of tax is %.2f\n",tax);
+            //B
+            calcYearlyTax ();
+
+        }
+
+        //A
+        public static double calcTax(int a , int b){
+            double tax=0.0;
+            if(a<18){
+                tax =0.0;
+            }
+            else {
+                if(b<10000){
+                    tax =0.0;
+                }
+                else if(b>=10000 && b<=20000){
+                    tax = b*.07;
+                }
+                else if(b>20000){
+                    tax =b*.14;
+                }
+            }
+            return tax;
+        }
+
+        //B
+
+        public static void calcYearlyTax (){
+            Scanner sc = new Scanner (System.in);
+            System.out.println("give age");
+            int age = sc.nextInt();
+            double totaltax =0.0;
+            double tax=0.0;
+            if(age<18){
+                System.out.println("the amount of tax is "+tax);
+            }
+            else{
+                for (int i =1; i<=12 ; i++){
+                    System.out.println("enter your salary");
+                    int sal = sc.nextInt();
+                    double taxMon = calcTax(age, sal);
+                    totaltax +=taxMon;
+                    System.out.printf("month %d tax %.2f\n",i, taxMon);
+
+                }
+
+            }
+            System.out.println("Total Yearly Tax: " + totaltax);
+        }
+    }
+
+
+

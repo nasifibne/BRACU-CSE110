@@ -1,0 +1,21 @@
+public class firletterupp{
+  public static void main (String [] args){
+  
+    String st ="this is a sentence";
+    String ns="";
+    String ws = ns+st;
+    for (int i =0; i<ws.length() ; i++){
+      char c = wt.charAt(i);
+      if (c==' '){
+        int index =i+1;
+        if (st.charAt(index) >= 'a' && st.charAt(index)<='z'){
+          int d = (int)c -32;
+          c = (char)d;
+        }
+        
+      }
+      ns +=c;
+    }
+    System.out.println(ns);
+  }
+}

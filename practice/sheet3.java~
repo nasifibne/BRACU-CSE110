@@ -1,0 +1,31 @@
+import java.util.Scanner;
+public class sheet3{
+  public static viod main (String [] args){
+  
+    Scanner sc=new Scanner (System.in);
+    System.out.print("Enter the initial price of an oxygen cylinder in 1999:");
+    int oxy = sc.nextInt();
+    System.out.print("Enter the initial price of a unit of water reserve in 1999:");
+    int wat = sc.nextInt();
+    System.out.print("Enter the monthly inflation rate (percentage) for water reserves: ");
+    int infOxy= sc.nextInt();
+    System.out.print("Enter the monthly inflation rate (percentage) for water reserves: ");
+    int infWat= sc.nextInt();
+    int month= (2025-1999)*12;
+    int oxyPri=oxy;
+    int watPri= wat;
+    for (int i =1; i<=month ; i++){
+    
+      oxyPri += ((oxyPri)*infOxy/100);
+      watPri += ((watPri)*infWat/100);
+    }
+    System.out.println("Current price of an oxygen cylinder: "+ oxyPri);
+    System.out.println("Current price of a unit of water reserve: "+ watPri);
+    if ((oxyPri-oxy)>(watPri-wat)){
+    System.out.println("The price of oxygen cylinders has increased more");
+    }
+    else {
+    System.out.println("the price of water reserves has increased more.");
+    }
+  }
+}

@@ -1,0 +1,27 @@
+public class ashfak{
+  public static void main (String [] args){
+ /*Apple 
+  Ape 
+  Apu*/ 
+    String st1 = "Apple";
+    String st2 = "Ape";
+    String st3 = "Apu";
+    String ns ="";
+//    int s1 = st1.length();
+//    int s2 = st2.length();
+//    int s3 = st3.length();
+    for (int i =0 ; i<st1.lenth() ; i++){
+      if (st1.charAt(i) == st2.charAt(i) == st3.charAt(i)){
+        ns+=st1.charAt(i);
+      }
+      
+    }
+    System.out.println(ns);
+      
+      
+      
+      
+    
+  
+  }
+}

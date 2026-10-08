@@ -1,0 +1,25 @@
+public class st6{
+  public static void main(String [] args){
+  
+    String st ="cse110 is fun";
+    String stcheck ="fun";
+    boolean isSame = true;
+    for (int i=0; i<st.length ; i++){
+      char c = st.charAt(i);
+      if (c == stcheck.charAt(0)){
+        int idx = i;
+        for (int j=0; j<stcheck.length() ; j++){
+          if ( st.charAt(idx++) != stcheck.charAt(j+1)){
+            isSame = false;
+          } 
+        }
+        
+      }
+    }
+    if(isSame){
+      System.out.println("find");
+    }
+    else {
+      System.out.println("not found"):
+    }
+  }}

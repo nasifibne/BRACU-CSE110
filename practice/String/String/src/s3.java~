@@ -1,0 +1,38 @@
+public class s3{
+  public static void main (String [] args){
+
+    String st = "OOOOsorepfnthntgdklg";
+    String nsl="";
+    String nsu="";
+    //lowercase
+    for (int i =0; i<st.length(); i++){
+      char c = st.charAt(i);
+      if ((int)c>=97 && (int)c <=122){
+        nsl +=c
+      }
+      else if ((int)c>=65 && (int)c <=90){
+        int d = (int)c + 32;
+        nsl += (char)d;
+      }
+      else {
+        nsl +=c;
+      }
+    }
+    System.out.println("lowercase "  + nsl);
+    //uppercase
+    for(int i=0; i<st.length() ; i++){
+      char c = st.charAt(i);
+      if ((int)c>=65 && (int)c <=90){
+        nsu +=c;
+      }
+      else if ((int)c>=97 && (int)c <=122){
+        int d = (int ) c-32;
+        nsu += (char)d
+      }
+      else {
+        nsu +=c;
+      }
+    }
+    System.out.println("uppercase " + nsu);
+  }
+}

@@ -1,0 +1,235 @@
+//ans to the ques no 1
+import java.util.Scanner;
+public class hometask1 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner( System.in);
+        System.out.println("Give me your phrase.");
+        String in = sc.nextLine();
+        String temp = "";
+        
+        for(int i =0 ; i<in.length() ; i++){
+          char c = in.charAt(i);
+          if(c>='A' && c<='Z'){
+            c +=32;
+          }
+          temp +=c;
+        }
+        
+        int cons=0, vow =0;
+        boolean flag = false;
+        
+        for (int i =0; i<temp.length() ; i++){
+            char c = temp.charAt(i);
+            
+            if(c=='a' || c=='e' || c=='i' || c=='o' || c=='u' ) {
+                vow++;
+            }
+            else if ((c>='a' && c<='z') || (c>='A' && c<='Z')){
+                cons ++;
+            }
+        }
+        
+        if(vow>0 && cons>0) {
+            if (vow % 3 == 0 && cons % 5 == 0) {
+                flag = true;
+            }
+        }
+        
+        if (flag){
+            System.out.println("Aaarr! Me Plunder!!");
+        }
+        
+        else {
+            System.out.println("Blimey! No Plunder!!");
+        }
+        
+        sc.close();
+    } 
+}
+
+
+//ans to the ques no 2
+import java.util.Scanner;
+public class hometask2 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Give me your first string in lowercase");
+        String in1 = sc.nextLine();
+        System.out.println("Give me your second string in lowercase");
+        String in2 = sc.nextLine();
+        String ns ="";
+        boolean flag=true;
+        
+        for (int i =0 ; i<in1.length() ; i++){
+            for (int j =0; j<in2.length() ; j++) {
+                if (in1.charAt(i)== in2.charAt(j)) {
+                    flag = false;
+                    break;
+                }
+            }
+            if (flag){
+                ns = ns+ in1.charAt(i);
+            }
+            flag = true;
+        }
+
+        for (int i =0 ; i<in2.length() ; i++){
+            for (int j =0; j<in1.length() ; j++) {
+                if (in2.charAt(i)== in1.charAt(j)) {
+                    flag = false;
+                    break;
+                }
+            }
+            if (flag){
+                ns = ns+ in2.charAt(i);
+            }
+            flag = true;
+        }
+
+        String upper="";
+        for (int i =0 ; i<ns.length() ; i++){
+            char c = ns.charAt(i);
+           
+            if (c >= 'a' && c<='z'){
+                c-=32;
+            }
+            upper +=c;
+        }
+        System.out.println(upper);
+        sc.close();
+    }
+}
+
+
+
+// ans to the ques no 3
+import java.util.Scanner;
+public class hometask3 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner( System.in);
+        System.out.println("Give me your sentece");
+        String in = sc.nextLine();
+        String ns="";
+        int count=0;
+        
+        for(int i =0 ; i<in.length() ; i++){
+          char c = in.charAt(i);
+          int d = (int)c;
+          if((d>=97 && d<=122) || (d>=65 && d<=90) ){
+            if(count %2==0 && (d>=65 && d<=90)){
+              d+=32;
+              c = (char)d;
+            }
+            else if (count %2==1 && (d>=97 && d<=122)){
+              d-=32;
+              c = (char)d;
+            }
+            count++;
+          }
+          ns +=c;
+        }
+        System.out.println(ns);
+        sc.close();
+    }
+}
+
+
+
+// ans to the ques no 4
+import java.util.Scanner;
+public class hometask4 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Give me your password.");
+        String in = sc.nextLine();
+        
+        boolean upper =false;
+        boolean lower =false;
+        boolean number =false;
+        boolean special =false;
+
+        for (int i = 0 ; i<in.length() ;i++){
+            char c = in.charAt(i);
+            if (c>='A' && c<='Z'){
+                upper =true;
+                break;
+            }
+        }
+        
+        for (int i = 0 ; i<in.length() ;i++){
+            char c = in.charAt(i);
+            if (c>='a' && c<='z') {
+                lower = true;
+                break;
+            }
+        }
+              
+        for (int i = 0 ; i<in.length() ;i++){
+            char c = in.charAt(i);
+            if (c>='1' && c<='9'){
+                number =true;
+                break;
+            }
+        }
+        
+        for (int i = 0 ; i<in.length() ;i++) {
+            char c = in.charAt(i);
+            if (c=='!' || c == '@' || c == '#' || c == '$' ) {
+                special = true;
+                break;
+            }
+        }
+
+        if (upper && lower && number && special){
+            System.out.println("True");
+        }
+        else {
+            System.out.println("False");
+        }
+        sc.close();
+    }
+}
+
+
+
+//ans to the ques no 5
+import java.util.Scanner;
+public class homeTask5 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner( System.in);
+        System.out.println("Give the person's name");
+        String name = sc.nextLine();
+        System.out.println("Give me your email's password");
+        String pass = sc.nextLine();
+        boolean flag = true;
+        
+        int nam = name.length();
+        int pas = pass.length();
+        
+        for (int i =0 ; i<=pas-nam ; i++){
+            if (pass.charAt(i) == name.charAt(0)){
+                int index=i;
+                
+                boolean word = true;
+                
+                for (int j =0 ; j<name.length() ; j++){
+                 
+                    if (name.charAt(j) != pass.charAt(index)){
+                        word = false;
+                        break;
+                    }
+                    index +=1;
+                }
+                if(word){
+                  flag = false;
+                }
+            }
+        }
+        if (flag){
+            System.out.println("valid");
+        }
+        else {
+            System.out.println("Invalid");
+        }
+    }
+}

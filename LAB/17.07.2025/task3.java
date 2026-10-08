@@ -1,0 +1,25 @@
+//ans to the ques no 3
+import java.util.Scanner;
+public class task3{
+  public static void main (String [] args){
+
+    Scanner sc= new Scanner (System.in);
+    System.out.print("Enter an Integer");
+    int x= sc.nextInt();
+    int positive =0;
+    int negative =0;
+    for (int i =1 ; i<=x ; i++){
+      System.out.printf ("Enter number %d", i);
+      int num = sc.nextInt();
+      if (num>=0){
+      positive ++;
+      }
+      else {
+      negative ++;
+      }
+    }
+    System.out.printf("%d Non-negative Numbers\n", positive);
+    System.out.printf("%d Negative Numbers\n", negative);
+    sc.close();
+  }
+}

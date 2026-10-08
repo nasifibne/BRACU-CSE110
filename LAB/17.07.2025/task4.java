@@ -1,0 +1,20 @@
+//ans to the ques no 4
+import java.util.Scanner;
+public class task4{
+  public static void main (String [] args){
+
+    Scanner sc= new Scanner (System.in);
+    System.out.print("Enter the number of terms");
+    int x = sc.nextInt();
+    int sum=0;
+    int odd =1;
+    System.out.println("The odd numbers are : ");
+    for (int i=1 ; i<=x ; i++){
+    System.out.println(odd);
+    sum +=odd;
+    odd +=2;
+    }
+    System.out.printf("The Sum of odd Natural Numbers up to %d terms is: %d\n", x, sum);
+  sc.close();
+  }
+}

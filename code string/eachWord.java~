@@ -1,0 +1,21 @@
+public class eachWord{
+  public static void main (String [] args){
+
+    String st = "nasif ibne mohiuddin";
+    st = " "+ st;
+    string ns ="";
+    
+    for (int i =0 ; i<st.length() ; i++){
+      char c = st.charAt(i);
+      if (st.charAt(i-1)==' '){
+        c-=32;
+        
+      }
+      else {
+        c=c;
+      }
+      ns+=c;
+    }
+    System.out.println(ns);
+  }
+}

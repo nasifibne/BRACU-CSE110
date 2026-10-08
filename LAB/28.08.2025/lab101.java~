@@ -1,0 +1,43 @@
+public class lab101{
+  public static void main (String [] args){
+    
+    evenChecker(10);
+    boolean result = isEven(10);
+    System.out.println( result );
+    boolean result = isPos(-5);
+    System.out.println( result );
+
+    
+  }
+  
+  public static void evenChecker (int a){
+    if(a%2==0){
+      System.out.println("Even! ");
+    }
+    else {
+      System.out.println("Odd! ");
+    }
+  }
+  
+   public static boolean isEven (int a){
+     boolean flag = false; 
+     if(a%2==0){
+       flag = true;
+     }
+     else {
+       flag = flase;
+     }
+     return flag;
+   }
+  
+   public static boolean isPos (int a){
+     boolean flag = false; 
+     if(a>=0){
+       flag = true;
+     }
+     else {
+       flag = flase;
+     }
+     return flag;
+  }
+}

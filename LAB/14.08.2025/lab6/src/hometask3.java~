@@ -1,0 +1,26 @@
+// ans to the ques no 3
+import java.util.Scanner;
+public class hometask3 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner( System.in);
+        System.out.println("Give me your sentece");
+        String in = sc.nextLine();
+        String ns="";
+        int count=0;
+        for(int i =0 ; i<in.length() ; i++){
+          char c = in.charAt(i);
+          if((c>='a' && c<='z') || (c>='A' && c<='Z') ){
+            if(count %2==0 && (c>='A' && c<='Z')){
+              c+=32;
+            }
+            else if (count %2==1 && (c>='a' && c<='z')){
+              c-=32;
+            }
+            count++;
+          }
+          ns +=c;
+        }
+        System.out.println(ns);
+        sc.close();
+    }
+}

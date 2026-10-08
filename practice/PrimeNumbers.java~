@@ -1,0 +1,60 @@
+import java.util.Scanner; 
+
+public class PrimeNumbers {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in); // Create a Scanner object to read input
+
+        int N; // Declare a variable to store the user's input
+
+        // Loop to ensure the user enters a positive integer for N
+        while (true) {
+            System.out.print("Enter a positive integer N (N > 0): ");
+            if (scanner.hasNextInt()) { // Check if the next input is an integer
+                N = scanner.nextInt(); // Read the integer
+                if (N > 0) { // Check if N is positive
+                    break; // Exit the loop if N is valid
+                } else {
+                    System.out.println("Invalid input. N must be greater than 0.");
+                }
+            } else {
+                System.out.println("Invalid input. Please enter an integer.");
+                scanner.next(); // Consume the invalid input to prevent an infinite loop
+            }
+        }
+
+        System.out.println("The first " + N + " prime numbers are:");
+
+        int count = 0; // Counter for the number of prime numbers found
+        int num = 2;   // Start checking for prime numbers from 2
+
+        // Outer loop: Continues until N prime numbers are found
+        while (count < N) {
+            boolean isNumPrime = true; // Assume the current number is prime
+
+            // Inner loop: Checks if 'num' is prime
+            // Numbers less than or equal to 1 are not prime, so we only check from 2 onwards.
+            // We check for divisibility from 2 up to the square root of 'num'.
+            // If 'num' has a divisor 'd' greater than sqrt(num), then it must also have a divisor 'num/d'
+            // which is less than sqrt(num). So, checking up to sqrt(num) is sufficient.
+            if (num <= 1) {
+                isNumPrime = false; // Not a prime number
+            } else {
+                for (int i = 2; i * i <= num; i++) {
+                    if (num % i == 0) {
+                        isNumPrime = false; // If 'num' is divisible by 'i', it's not prime
+                        break; // No need to check further, it's not prime
+                    }
+                }
+            }
+
+            if (isNumPrime) {
+                System.out.println(num); // Print the prime number
+                count++; // Increment the count of prime numbers found
+            }
+            num++; // Move to the next integer to check
+        }
+
+        scanner.close(); // Close the scanner to release system resources
+    }
+}

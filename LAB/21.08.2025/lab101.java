@@ -1,0 +1,29 @@
+////ans to the ques no 1
+import java.util.Scanner;
+public class lab101{
+  public static void main(String [] args){
+    Scanner sc = new Scanner (System.in);
+    int len = sc.nextInt();
+    int [] arr = new int [len];
+    //input
+    for (int i =0 ; i<len ; i++){
+      int d = sc.nextInt();
+      arr [i] = d;
+    }
+    System.out.println("Original array: ");
+    for (int i =0 ; i<arr.length ; i++){
+        System.out.println( i + " : " + arr[i]);
+      
+    }
+    int [] arr1 = new int [len+1];
+    
+    for (int j =0 ; j<arr.length ; j++){
+        arr1[j] = arr[j];  
+    }
+    arr1 [len] = sc.nextInt();
+     for (int i =0 ; i<arr1.length ; i++){
+        System.out.println( i + " : " + arr1[i]);
+    } 
+     sc.close();
+  }
+}

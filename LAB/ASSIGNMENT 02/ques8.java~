@@ -1,0 +1,21 @@
+import java.util.Scanner;
+public class ques8{
+  public static void main(String [] args){
+  
+    System.out.println("give 3 decimal value");
+    Scanner sc= new Scanner(System.in);
+    float val1= sc.nextFloat();
+    float val2= sc.nextFloat();
+    float val3= sc.nextFloat();
+    
+    if (val1>val2 && val1>val3){
+    System.out.println("Maximum number is " +val1);
+    }
+    else if (val2>val1 && val2>val3){
+      System.out.println ("Maximum number is "+val2);
+    }  
+    else {
+    System.out.println("Maximum number is "+val3);
+    }
+  }
+}

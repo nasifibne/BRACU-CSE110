@@ -1,0 +1,17 @@
+// ans to the ques no 16
+public class ques16{
+  public static void main (String [] args){
+  
+    int a= 3456789;
+    int year;
+    year = a/525600;
+    System.out.println("approximately it is " +year " years");
+  
+  
+  
+  
+  
+  }
+
+
+}

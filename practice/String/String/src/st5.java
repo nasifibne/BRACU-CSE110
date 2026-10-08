@@ -1,0 +1,12 @@
+public class st5{
+  public static void main(String [] args){
+  
+    String st ="gg";
+    if(st.length()==0){
+      System.out.println("this is empty");    
+    }
+    else {
+    System.out.println("string is not empty");
+    }
+  
+  }}

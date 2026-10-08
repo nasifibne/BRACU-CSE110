@@ -1,0 +1,23 @@
+import java.util.Scanner;
+public class ques10{
+  public static void main(String [] args){
+   
+    Scanner sc= new Scanner(System.in);
+    System.out.print("Enter the amount the customer need to pay(Taka) ");
+    int num1= sc.nextInt();
+    System.out.println(" Enter the amount, customer gave(Taka) ");
+    int num2= sc.nextInt();
+    
+    int rim;
+    rim= num1-num2;
+    
+    if (rim>0){}
+    else{
+    System.out.println("Please pay" +(num2-num1)+" taka more.")
+    }
+    
+    
+    
+  
+  }
+}

@@ -1,0 +1,29 @@
+import java.util.Scanner;
+public class ques3
+{
+public static void main (String [] args)
+{
+  Scanner sc= new Scanner(System.int);
+  int num= sc.nextInt();
+  if(num/5 && num/7){
+  System.out.print("Divisible by Both")
+  }
+  else if (num/5){
+  System.out.println("Invalid: Divisible by 5 Only")
+  }
+  else if (num/7){
+  System.out.println("Invalid: Divisible by 7 Only ")
+  }
+  else {
+  System.out.println("NO");
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+}
+}

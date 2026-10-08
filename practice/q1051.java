@@ -1,0 +1,28 @@
+import java.util.Scanner;
+public class q1051{
+  public static void main(String [] args){
+
+    Scanner sc= new Scanner (System.in);
+    double inc= sc.nextDouble();
+    double tax=0.00;
+    if (inc<=2000){
+    System.out.println("Isento");
+    }
+    else if (inc>2000 && inc <=3000){
+    tax = ((inc-2000)*8)/100;
+    System.out.printf("R$ %.2f\n",tax);
+    }
+    else if (inc >3000 && inc <=4500){
+    tax= 1000*.08 + (inc-3000)*0.18;
+    System.out.printf("R$ %.2f\n",tax);
+    }
+    else if (inc >4500){
+    tax = (1000*0.08) + (1500*0.18) + ((inc-4500)*0.28);
+    System.out.printf("R$ %.2f\n",tax);
+    }
+      
+  
+  
+  
+  }
+}

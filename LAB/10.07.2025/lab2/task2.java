@@ -1,0 +1,27 @@
+//ans to the ques no 2
+import java.util.Scanner;
+public class task2{
+  public static void main(String [] args){
+    
+    Scanner sc= new Scanner(System.in);
+    int income= sc.nextInt();
+    int age= sc.nextInt();
+    int tax;
+    if (age>=18){
+      if(income<10000){
+        System.out.println("Your tax amounts in 0 Tk");
+      }
+      else if (income>=10000 && income<=20000){
+        tax=(income*5)/100;
+        System.out.printf("Your tax amounts in %d Tk\n" ,tax);
+      }
+      else if (income>20000){
+        tax=(income*10)/100;
+        System.out.printf("Your tax amounts in %d Tk\n" ,tax);
+      }
+    }
+    else {
+    System.out.println("Your tax amounts in 0 Tk");
+    }
+  }
+}

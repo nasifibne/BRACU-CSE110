@@ -1,0 +1,20 @@
+// ans to the ques no 19
+public class ques19{
+  public static viod main (String [] args){
+    
+    int a= 8;
+    int b= 3;
+    int x= a/2;
+    int c;
+    c=x*x+b*b
+   System.out.println("one side of the hexagon " + Mart.sqrt(c));
+  
+  
+  
+  
+  
+  
+  }
+
+
+}

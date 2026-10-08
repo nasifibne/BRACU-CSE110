@@ -1,0 +1,13 @@
+//ans to the ques no 15
+public class ques15{
+  public static void main (String [] args){
+    
+    float f1;
+    f1=200000;
+    meter = f1/.0254
+      System.out.println( "the value in inches " +f1);
+      System.out.println("the value in meter " +meter);
+
+
+}
+}

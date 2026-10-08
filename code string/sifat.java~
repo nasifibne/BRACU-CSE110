@@ -1,0 +1,23 @@
+public class sifat{
+  public static void main(String [] args){
+
+    //Input:Hello world
+    //Output:hELLO wORLD
+
+    
+    String st = "Hello world';
+      st = " "+st;
+      String ns ="";
+      for (int i=0; i<st.length() ; i++;){
+      char c =st.charAt(i);
+      if (i>=1 && st.charAt(i-1)==' ' && (c>='a' && c<='z'){
+        c -=32;
+      }
+      else if (c>='a' && c<='z'){
+          c-=32;
+      }
+      ns+=c;
+     }
+ System.out.println(ns);
+  }
+}

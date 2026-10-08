@@ -1,0 +1,33 @@
+// A librarian is tasked with organizing a large collection of books on shelves. 
+// Each shelf (or row) can hold up to k books. The books are added one by one until 
+// a shelf is completely filled; then, the librarian starts filling a new shelf. However, 
+// to allow for future expansion, every 3rd shelf is intentionally left empty. Write a program 
+// that takes two inputs: the total number of books n and the row capacity k. Your program should 
+// simulate the placement of books using a linear loop and then print the total number of shelves used, 
+// the number of books on the last non-empty shelf.
+
+import java.util.Scanner;
+public class sheet1{
+  public static void main (String [] args){
+  
+    Scanner sc= new Scanner (System.in);
+    int k= sc.nextInt();
+    int n =sc.nextInt();
+    int self=0;
+    for (int i =1; i<=n; i++){
+      if (i%k==0){
+      self ++;
+      }
+      if (self %3==0){
+        self++;
+      }
+         
+    }
+    
+  
+  
+  
+  
+  
+  }
+}

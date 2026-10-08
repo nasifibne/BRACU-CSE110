@@ -1,0 +1,73 @@
+// coding task 1
+public class ques1{
+  public static void main (String [] args){
+    
+    int min= 3456789;
+    int year = min/(365*24*60);
+    int rim = min%(365*24*60);
+    int day= rim/(24*60);
+    System.out.println( min +" minutes is approximately " +year + " years and "+ day + " days");
+
+  }
+}
+
+// coding task 2
+public class ques2{
+  public static void main (String [] args){
+  
+     int a= 2;
+     int b=5;
+     int c=8;
+     int d;
+     d =(2*b*(c-a)/3)+7;
+     System.out.println("d = " +d);
+
+  }
+}
+
+// coding task 3
+public class ques3{
+  public static void main (String [] args){
+  
+  int x= 1000054157;
+  System.out.println(x%10);
+  System.out.println((x%100)/10);
+  
+  }
+}
+
+// coding task 4
+public class ques4{
+  public static void main (String [] args){
+  
+    double a= 8;
+    double b=3;
+    double h= a/2;
+    double c;
+    c= Math.sqrt(h*h+b*b);
+    double area= ((3*Math.sqrt(3)/2)*c*c);
+    System.out.println("area = "+area);
+    double circumference = 6*c;
+    System.out.println("circumference = "+ circumference );
+
+  }
+}
+
+// coding task 5
+public class ques5{
+  public static void main (String [] args){
+    
+    double a = 4.5;
+    double b= 9.5;
+    double c;
+    c= Math.sqrt(a*a+b*b);
+    double x= a/c;
+    double y= b/c;
+    System.out.println("sin(A) = "+x);
+    System.out.println("cos(A) = "+y);
+    System.out.println("sin(B) = "+y);
+    System.out.println("cos(B) = "+x);
+
+  }
+}
+

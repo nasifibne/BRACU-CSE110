@@ -1,0 +1,12 @@
+public class string
+{
+  public static void main (String [] args){
+
+    String st = "student";
+    int i =0;
+    while(st.charAt(i)!=null){
+    i++;
+    }
+    System.out.println(i);
+  }
+}

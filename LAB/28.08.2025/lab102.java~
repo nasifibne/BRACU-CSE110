@@ -1,0 +1,34 @@
+public class lab102{
+  public static void main (String [] args){
+  
+    double area = circleArea(5);
+    System.out.println(area);
+    double volume = sphereVolume(5.0);
+    System.out.println(volume);
+    findSpace(5,"sphere");
+    
+  }
+  
+  public static double circleArea(int a ){
+    double circleArea = 3.14167*a*a;
+    return circleArea;
+  }
+  
+  public static double sphereVolume (int a){
+    double sphereArea = (4*3.1416*a*a*a)/3;
+    return sphereArea;
+  }
+  
+  public static void findSpace(int a , String x){
+    if(x.equals("circle")){
+      circleArea(a);
+    }
+    else if (x.equals("shpere")){
+      sphereArea(a);
+    }
+    else {
+      System.out.println("Wrong peramiter");
+    }
+  }
+  
+}

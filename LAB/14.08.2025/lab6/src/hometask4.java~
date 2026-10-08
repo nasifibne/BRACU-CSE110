@@ -1,0 +1,50 @@
+// ans to the ques no 4
+import java.util.Scanner;
+public class hometask4 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Give me your password.");
+        String in = sc.nextLine();
+        boolean upper =false;
+        boolean lower =false;
+        boolean number =false;
+        boolean special =false;
+
+        for (int i = 0 ; i<in.length() ;i++){
+            char c = in.charAt(i);
+            if (c>='A' && c<='Z'){
+                upper =true;
+                
+            }
+        }
+        
+        for (int i = 0 ; i<in.length() ;i++){
+            char c = in.charAt(i);
+            if (c>='a' && c<='z') {
+                lower = true;
+            }
+        }
+              
+        for (int i = 0 ; i<in.length() ;i++){
+            char c = in.charAt(i);
+            if (c>='1' && c<='9'){
+                number =true;
+            }
+        }
+        
+        for (int i = 0 ; i<in.length() ;i++) {
+            char c = in.charAt(i);
+            if (c=='!' || c == '@' || c == '#' || c == '$' ) {
+                special = true;
+            }
+        }
+
+        if (upper && lower && number && special){
+            System.out.println("True");
+        }
+        else {
+            System.out.println("False");
+        }
+        sc.close();
+    }
+}

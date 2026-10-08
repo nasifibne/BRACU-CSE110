@@ -1,0 +1,14 @@
+import java.util.Scanner;
+public class task4{
+  public static void main (String [] args){
+  
+    Scanner sc= new Scanner (System.in);
+    int back= 60;
+    
+    
+    back %=50;
+  
+  System.out.println(back);
+  
+  }
+}

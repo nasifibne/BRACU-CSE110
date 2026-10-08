@@ -1,0 +1,41 @@
+import java.util.Scanner ;
+public class sheet2{
+  public static void main(String [] args){
+
+    Scanner sc= new Scanner (System.in);
+    System.out.print("Enter karim's salary");
+    int sal = sc.nextInt();
+    double bonus =(double) sal *.75;
+    System.out.println("Amount with bonus: "+ bonus);
+    double wife = bonus*.45;
+    System.out.println("Wife budget : "+ wife);
+    double son = bonus*.45;
+    System.out.println("Son budget: "+ son);
+    double eme= bounus *.1;
+    System.out.println("Savings : "+eme);
+    double wifeBud= 90000;
+    double sonBud = 70000+7000;
+    int remWife=wife- wifeBud;
+    int remSon = son - sonBud;
+    if (wifeBud<wife){
+    System.out.println("Shopping done for wife");
+    }
+    else if ((remSon+wife)>wifeBud){
+    System.out.println("Shopping Done for wife with remaining money from son budget" );
+    }
+    else {
+    System.out.println("cannot do shopping for wife even with remaining money from his son's budget");
+    }
+    if (sonBud<son){
+     System.out.println("Shopping done for son"); 
+    }
+    else if ((remWife+son)>sonBud){
+    System.out.println("Shopping Done for son with remaining money from wife budget" );
+    }
+    else {
+    System.out.println("cannot do shopping for son even with remaining money from his wife's budget");    
+    }
+  
+  
+  }
+}

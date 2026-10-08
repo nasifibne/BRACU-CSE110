@@ -1,0 +1,11 @@
+public class st2 {
+    public static void main(String[] args) {
+        String st = "pprogejd";
+        int i =0;
+        while (st.charAt(i) != (char)0){
+            i++;
+
+        }
+        System.out.println("the length is "+ i);
+    }
+}
